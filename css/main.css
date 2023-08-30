@@ -575,7 +575,7 @@ code {
 .navbar {
   background-color: var(--color-primary);
   background-image: repeating-linear-gradient(
-    120deg,
+    45deg,
     var(--color-primary),
     var(--color-primary--dark) 1.5rem,
     var(--color-primary--light) 1.55rem,
