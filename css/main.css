@@ -837,7 +837,7 @@ code {
 .footer {
   background-color: var(--color-green--light);
   background: repeating-linear-gradient(
-    120deg,
+    45deg,
     var(--color-green--light),
     var(--color-green--lighter) 1.5rem,
     var(--color-green--medium) 1.55rem,
