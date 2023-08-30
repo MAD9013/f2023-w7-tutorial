@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Ensures that the text characters are displayed properly -->
+    <meta charset="UTF-8" />
+
+    <!-- Properly sizes content across different browser window sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+      The site title displayed in the browser tab.
+      Also used for Search Engine Optimization (SEO),
+      Google results, and accessibility tools/screen readers.
+    -->
+    <title>Grid Auto Flow | W7 - Grid AKA The&nbsp;G.O.A.T.</title>
+
+    <!-- Loads custom supporting CSS stylesheet(s) -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- Loads lesson specific CSS stylesheet -->
+    <link rel="stylesheet" href="./css/grid-auto-flow.css" />
+
+    <!-- Loads Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+  <body id="page" class="css-grid">
+    <!--
+      Accessibility feature that allows users to
+      quickly skip to key areas on the page.
+    -->
+    <ul class="skip-links">
+      <li>
+        <a class="skip-links__link" href="#nav">Skip to site navigation</a>
+      </li>
+      <li>
+        <a class="skip-links__link" href="#main">Skip to main content</a>
+      </li>
+    </ul>
+
+    <!--
+      Main site header. Features our site logo and navigation.
+    -->
+    <header class="navbar">
+      <div class="container">
+        <strong class="navbar__headline">
+          <a href="/" class="navbar__logo">
+            <span class="navbar__week">Week 7</span>
+            <span class="navbar__title">W7 - Grid AKA The&nbsp;G.O.A.T.</span>
+          </a>
+        </strong>
+        <button
+          class="navbar__toggle"
+          aria-label="Click to open mobile navigation"
+        >
+          <span class="navbar__tog navbar__tog--top"></span>
+          <span class="navbar__tog navbar__tog--middle"></span>
+          <span class="navbar__tog navbar__tog--bottom"></span>
+        </button>
+        <nav id="nav" class="navbar__nav">
+          <ul class="navbar__list">
+            <li>
+              <a href="./grid-basics.html" class="navbar__link">Basics</a>
+            </li>
+            <li>
+              <a href="./grid-areas.html" class="navbar__link">Grid Areas</a>
+            </li>
+            <li>
+              <a
+                href="./grid-auto-flow.html"
+                class="navbar__link"
+                aria-current="page"
+              >
+                Auto Flow
+              </a>
+            </li>
+            <li>
+              <a href="./grid-layouts.html" class="navbar__link"> Layouts </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!--
+      The main contains ALL of the content unique to this page.
+      Every page MUST have exactly one `main` that is a direct child of `body`.
+    -->
+    <main id="main">
+      <header class="banner">
+        <div class="container">
+          <div class="container--text">
+            <h1 class="banner__headline">Grid Auto Flow</h1>
+            <div class="banner__byline">
+              <p>
+                Lets take our grid to the next level with
+                <code>grid-auto-flow</code>, which allows for more flexibility
+                by changing the default flow of elements within our grid.
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- 
+        ====================================================
+        ============== TUTORIAL CONTENT START ==============
+        ====================================================
+      -->
+
+      <section>
+        <div class="container">
+          <h2>Changing Item Flow</h2>
+          <p>
+            The <code>grid-auto-flow</code> allows us to change the flow of our
+            grid items.
+          </p>
+          <div class="parent grid-auto-flow">
+            <div class="box box--one">1</div>
+            <div class="box box--two">2</div>
+            <div class="box box--three">3</div>
+            <div class="box box--four">4</div>
+            <div class="box box--five">5</div>
+            <div class="box box--six">6</div>
+            <div class="box box--seven">7</div>
+            <div class="box box--eight">8</div>
+            <div class="box box--nine">9</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>Grid of Images</h2>
+          <p>
+            We can use <code>grid-auto-flow</code> to make a great grid of
+            varying sized images.
+          </p>
+          <div class="parent-styles grid-images">
+            <img
+              class="dog-1"
+              src="https://placedog.net/100/100?random"
+              alt="Dog 1"
+            />
+            <img
+              class="dog-2"
+              src="https://placedog.net/200/200?random"
+              alt="Dog 2"
+            />
+            <img
+              class="dog-3"
+              src="https://placedog.net/300/300?random"
+              alt="Dog 3"
+            />
+            <img
+              class="dog-4"
+              src="https://placedog.net/400/400?random"
+              alt="Dog 4"
+            />
+            <img
+              class="dog-5"
+              src="https://placedog.net/500/500?random"
+              alt="Dog 5"
+            />
+            <img
+              class="dog-6"
+              src="https://placedog.net/600/600?random"
+              alt="Dog 6"
+            />
+            <img
+              class="dog-7"
+              src="https://placedog.net/700/700?random"
+              alt="Dog 7"
+            />
+            <img
+              class="dog-8"
+              src="https://placedog.net/800/800?random"
+              alt="Dog 8"
+            />
+            <img
+              class="dog-9"
+              src="https://placedog.net/900/900?random"
+              alt="Dog 9"
+            />
+            <img
+              class="dog-10"
+              src="https://placedog.net/1000/1000?random"
+              alt="Dog 10"
+            />
+            <img
+              class="dog-11"
+              src="https://placedog.net/1100/1100?random"
+              alt="Dog 11"
+            />
+            <img
+              class="dog-12"
+              src="https://placedog.net/1200/1200?random"
+              alt="Dog 12"
+            />
+            <img
+              class="dog-13"
+              src="https://placedog.net/1300/1300?random"
+              alt="Dog 13"
+            />
+            <img
+              class="dog-14"
+              src="https://placedog.net/1400/1400?random"
+              alt="Dog 14"
+            />
+            <img
+              class="dog-15"
+              src="https://placedog.net/1500/1500?random"
+              alt="Dog 15"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- 
+        ====================================================
+        =============== TUTORIAL CONTENT END ===============
+        ====================================================
+      -->
+    </main>
+
+    <!--
+      Site footer. Contains site logo and legal info.
+      
+      Could also contain other concluding information such
+      as repeating the navigation, contact info, and more.
+    -->
+    <footer class="footer">
+      <div class="container container--grid">
+        <div class="footer__column">
+          <a href="/" class="footer__logo">
+            <span class="footer__week">Week 7</span>
+            <span class="footer__title">Grid AKA The&nbsp;G.O.A.T.</span>
+          </a>
+        </div>
+
+        <div class="footer__column footer__column--legal">
+          <small>
+            Created for
+            <a href="https://mad9013.github.io/F2023/">MAD9013 course</a> and
+            free for any use.
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Accessibility feature: return to top button -->
+    <a href="#page" class="to-top">To Top</a>
+
+    <!--
+      Adds a layer when the mobile navigation is open that
+      allows users to click to the side and auto close the nav
+    -->
+    <div class="click-to-close"></div>
+
+    <!-- Loads custom JavaScript file -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

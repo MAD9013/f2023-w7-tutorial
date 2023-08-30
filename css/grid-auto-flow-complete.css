@@ -1,0 +1,32 @@
+.grid-auto-flow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-flow: dense;
+}
+
+.box--one,
+.box--two {
+  grid-column: span 2;
+}
+
+.grid-images {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(5rem, 1fr));
+  gap: 0.5rem;
+  grid-auto-flow: dense;
+}
+
+.grid-images img {
+  width: 100%;
+}
+
+.grid-images img:nth-child(3n) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.grid-images img:nth-child(6n) {
+  grid-column: span 3;
+  grid-row: span 3;
+}

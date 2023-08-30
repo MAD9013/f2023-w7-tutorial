@@ -1,0 +1,82 @@
+.grid-areas {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "a b c"
+    "a d c"
+    "a e f";
+}
+
+.grid-areas .box--one {
+  grid-area: a;
+}
+
+.grid-areas .box--two {
+  grid-area: b;
+}
+
+.grid-areas .box--three {
+  grid-area: c;
+}
+
+.grid-areas .box--four {
+  grid-area: d;
+}
+
+.grid-areas .box--five {
+  grid-area: e;
+}
+
+.grid-areas .box--six {
+  grid-area: f;
+}
+
+.mini-page {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "aside"
+    "footer";
+}
+
+.mini-page header {
+  grid-area: header;
+}
+
+.mini-page main {
+  grid-area: main;
+}
+
+.mini-page aside {
+  grid-area: aside;
+}
+
+.mini-page footer {
+  grid-area: footer;
+}
+
+@media only screen and (min-width: 45em) {
+  .mini-page {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "header header"
+      "main aside"
+      "footer footer";
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  .mini-page {
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas:
+      "header main aside"
+      "header main ."
+      "footer footer footer";
+  }
+
+  .mini-page aside {
+    position: sticky;
+    top: 6rem;
+  }
+}

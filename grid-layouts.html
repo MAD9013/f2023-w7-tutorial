@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Ensures that the text characters are displayed properly -->
+    <meta charset="UTF-8" />
+
+    <!-- Properly sizes content across different browser window sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+      The site title displayed in the browser tab.
+      Also used for Search Engine Optimization (SEO),
+      Google results, and accessibility tools/screen readers.
+    -->
+    <title>Grid Layouts | W7 - Grid AKA The&nbsp;G.O.A.T.</title>
+
+    <!-- Loads custom supporting CSS stylesheet(s) -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- Loads lesson specific CSS stylesheet -->
+    <link rel="stylesheet" href="./css/grid-layouts.css" />
+
+    <!-- Loads Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+  <body id="page" class="css-grid">
+    <!--
+      Accessibility feature that allows users to
+      quickly skip to key areas on the page.
+    -->
+    <ul class="skip-links">
+      <li>
+        <a class="skip-links__link" href="#nav">Skip to site navigation</a>
+      </li>
+      <li>
+        <a class="skip-links__link" href="#main">Skip to main content</a>
+      </li>
+    </ul>
+
+    <!--
+      Main site header. Features our site logo and navigation.
+    -->
+    <header class="navbar">
+      <div class="container">
+        <strong class="navbar__headline">
+          <a href="/" class="navbar__logo">
+            <span class="navbar__week">Week 7</span>
+            <span class="navbar__title">W7 - Grid AKA The&nbsp;G.O.A.T.</span>
+          </a>
+        </strong>
+        <button
+          class="navbar__toggle"
+          aria-label="Click to open mobile navigation"
+        >
+          <span class="navbar__tog navbar__tog--top"></span>
+          <span class="navbar__tog navbar__tog--middle"></span>
+          <span class="navbar__tog navbar__tog--bottom"></span>
+        </button>
+        <nav id="nav" class="navbar__nav">
+          <ul class="navbar__list">
+            <li>
+              <a href="./grid-basics.html" class="navbar__link">Basics</a>
+            </li>
+            <li>
+              <a href="./grid-areas.html" class="navbar__link">Grid Areas</a>
+            </li>
+            <li>
+              <a href="./grid-auto-flow.html" class="navbar__link">
+                Auto Flow
+              </a>
+            </li>
+            <li>
+              <a
+                href="./grid-layouts.html"
+                class="navbar__link"
+                aria-current="page"
+              >
+                Layouts
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!--
+      The main contains ALL of the content unique to this page.
+      Every page MUST have exactly one `main` that is a direct child of `body`.
+    -->
+    <main id="main">
+      <header class="banner">
+        <div class="container">
+          <div class="container--text">
+            <h1 class="banner__headline">Grid Layouts</h1>
+            <div class="banner__byline">
+              <p>
+                Together let's explore some common, responsive layouts and learn
+                how to make them with grid.
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- 
+        ====================================================
+        ============== TUTORIAL CONTENT START ==============
+        ====================================================
+      -->
+
+      <section>
+        <div class="container">
+          <h2>Dog Image Layout</h2>
+          <div class="grid">
+            <div class="col xs-1 s-1-2 m-1-3 l-1-2">
+              <img
+                src="https://placedog.net/1000/1000?random"
+                alt="A random dog!"
+              />
+            </div>
+            <div class="col xs-1 s-1-2 m-1-3 l-1-4">
+              <img
+                src="https://placedog.net/900/900?random"
+                alt="A random dog!"
+              />
+            </div>
+            <div class="col xs-1 s-1-2 m-1-3 l-1-4">
+              <img
+                src="https://placedog.net/950/950?random"
+                alt="A random dog!"
+              />
+            </div>
+            <div class="col xs-1 s-1-2 m-1-3 l-1-4">
+              <img
+                src="https://placedog.net/850/850?random"
+                alt="A random dog!"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>Dog Card Layout</h2>
+          <ul class="grid grid-cards" role="list">
+            <li class="col xs-1 m-1-2 l-1-4">
+              <a class="card" href="#">
+                <div class="card__img">
+                  <img
+                    src="https://placedog.net/550/550?random"
+                    alt="A random dog!"
+                  />
+                </div>
+                <div class="card__content">
+                  <h3 class="card__title">Card Title</h3>
+                  <p class="card__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                  <span class="btn">Learn More</span>
+                </div>
+              </a>
+            </li>
+            <li class="col xs-1 m-1-2 l-1-4">
+              <a class="card" href="#">
+                <div class="card__img">
+                  <img
+                    src="https://placedog.net/500/500?random"
+                    alt="A random dog!"
+                  />
+                </div>
+                <div class="card__content">
+                  <h3 class="card__title">Card Title</h3>
+                  <p class="card__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                  <span class="btn">Learn More</span>
+                </div>
+              </a>
+            </li>
+            <li class="col xs-1 m-1-2 l-1-4">
+              <a class="card" href="#">
+                <div class="card__img">
+                  <img
+                    src="https://placedog.net/600/600?random"
+                    alt="A random dog!"
+                  />
+                </div>
+                <div class="card__content">
+                  <h3 class="card__title">Card Title</h3>
+                  <p class="card__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                  <span class="btn">Learn More</span>
+                </div>
+              </a>
+            </li>
+            <li class="col xs-1 m-1-2 l-1-4">
+              <a class="card" href="#">
+                <div class="card__img">
+                  <img
+                    src="https://placedog.net/650/650?random"
+                    alt="A random dog!"
+                  />
+                </div>
+                <div class="card__content">
+                  <h3 class="card__title">Card Title</h3>
+                  <p class="card__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                  <span class="btn">Learn More</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="split-content">
+        <div class="container container--grid">
+          <div class="split-content__img">
+            <img
+              src="https://placedog.net/1000/1000?random"
+              alt="A random dog!"
+            />
+          </div>
+          <div class="split-content__content">
+            <h2>Split Content Layout</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+              ut debitis sit placeat quas, at consequatur similique laborum quae
+              libero aliquid ipsa aspernatur facilis iure incidunt repudiandae
+              necessitatibus error. Tenetur?
+            </p>
+            <a class="btn" href="#">Learn more!</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="container--winged">
+        <h2>Winged Container</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+          possimus fugit nemo itaque ab dicta quisquam enim et nam eaque! Iure
+          id quam saepe ex numquam. Consectetur quisquam numquam voluptatibus?
+        </p>
+        <img
+          class="full"
+          src="https://placedog.net/2500/1000?random"
+          alt="A dog!"
+        />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis qui
+          expedita natus eaque incidunt, temporibus culpa quam dolor corporis,
+          harum commodi sit neque distinctio dolorem quaerat magnam
+          consequuntur! Delectus debitis quo sint ea a accusantium accusamus
+          nihil quam dolore unde sed minima laudantium placeat quod,
+          voluptatibus eius, incidunt natus commodi. Aut numquam ab itaque esse
+          quas quisquam temporibus repudiandae sint? Explicabo repellat
+          accusantium aperiam esse et quia hic ipsam. Distinctio harum
+          consectetur, necessitatibus iste corrupti facere, tenetur sed dolorem
+          itaque eum assumenda ex error! Debitis consectetur praesentium modi
+          sapiente, reprehenderit minus, quibusdam nostrum nam, eligendi id rem
+          iusto aliquid reprehenderit minus ducimus.
+        </p>
+        <img
+          class="wide-left"
+          src="https://placedog.net/1500/1000?random"
+          alt="Doggo"
+        />
+        <p class="contained-right align-self-center">
+          Provident earum, incidunt hic impedit sed a molestiae exercitationem,
+          assumenda beatae saepe vel doloribus reprehenderit ea magnam libero?
+          Aspernatur quam cum illo fugit, omnis molestias voluptates! Vero
+          corrupti accusamus labore! Suscipit vero aliquid dolorum asperiores
+          doloremque, soluta saepe quos? Facere sunt architecto, necessitatibus
+          eveniet natus adipisci laboriosam. Nihil asperiores ab veniam voluptas
+          quidem sint molestias atque blanditiis? Laboriosam, repudiandae nobis?
+        </p>
+        <p>
+          Suscipit vero aliquid dolorum asperiores doloremque, soluta saepe
+          quos? Facere sunt architecto, necessitatibus eveniet natus adipisci
+          laboriosam. Nihil asperiores ab veniam voluptas quidem sint molestias
+          atque blanditiis? Laboriosam, repudiandae nobis?
+        </p>
+      </section>
+
+      <!-- 
+        ====================================================
+        =============== TUTORIAL CONTENT END ===============
+        ====================================================
+      -->
+    </main>
+
+    <!--
+      Site footer. Contains site logo and legal info.
+      
+      Could also contain other concluding information such
+      as repeating the navigation, contact info, and more.
+    -->
+    <footer class="footer">
+      <div class="container container--grid">
+        <div class="footer__column">
+          <a href="/" class="footer__logo">
+            <span class="footer__week">Week 7</span>
+            <span class="footer__title">Grid AKA The&nbsp;G.O.A.T.</span>
+          </a>
+        </div>
+
+        <div class="footer__column footer__column--legal">
+          <small>
+            Created for
+            <a href="https://mad9013.github.io/F2023/">MAD9013 course</a> and
+            free for any use.
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Accessibility feature: return to top button -->
+    <a href="#page" class="to-top">To Top</a>
+
+    <!--
+      Adds a layer when the mobile navigation is open that
+      allows users to click to the side and auto close the nav
+    -->
+    <div class="click-to-close"></div>
+
+    <!-- Loads custom JavaScript file -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

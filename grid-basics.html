@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Ensures that the text characters are displayed properly -->
+    <meta charset="UTF-8" />
+
+    <!-- Properly sizes content across different browser window sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+      The site title displayed in the browser tab.
+      Also used for Search Engine Optimization (SEO),
+      Google results, and accessibility tools/screen readers.
+    -->
+    <title>Basics | W7 - Grid AKA The&nbsp;G.O.A.T.</title>
+
+    <!-- Loads custom supporting CSS stylesheet(s) -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- Loads lesson specific CSS stylesheet -->
+    <link rel="stylesheet" href="./css/grid-basics.css" />
+
+    <!-- Loads Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+  <body id="page" class="css-grid">
+    <!--
+      Accessibility feature that allows users to
+      quickly skip to key areas on the page.
+    -->
+    <ul class="skip-links">
+      <li>
+        <a class="skip-links__link" href="#nav">Skip to site navigation</a>
+      </li>
+      <li>
+        <a class="skip-links__link" href="#main">Skip to main content</a>
+      </li>
+    </ul>
+
+    <!--
+      Main site header. Features our site logo and navigation.
+    -->
+    <header class="navbar">
+      <div class="container">
+        <strong class="navbar__headline">
+          <a href="/" class="navbar__logo">
+            <span class="navbar__week">Week 7</span>
+            <span class="navbar__title">W7 - Grid AKA The&nbsp;G.O.A.T.</span>
+          </a>
+        </strong>
+        <button
+          class="navbar__toggle"
+          aria-label="Click to open mobile navigation"
+        >
+          <span class="navbar__tog navbar__tog--top"></span>
+          <span class="navbar__tog navbar__tog--middle"></span>
+          <span class="navbar__tog navbar__tog--bottom"></span>
+        </button>
+        <nav id="nav" class="navbar__nav">
+          <ul class="navbar__list">
+            <li>
+              <a
+                href="./grid-basics.html"
+                class="navbar__link"
+                aria-current="page"
+              >
+                Basics
+              </a>
+            </li>
+            <li>
+              <a href="./grid-areas.html" class="navbar__link">Grid Areas</a>
+            </li>
+            <li>
+              <a href="./grid-auto-flow.html" class="navbar__link">
+                Auto Flow
+              </a>
+            </li>
+            <li>
+              <a href="./grid-layouts.html" class="navbar__link"> Layouts </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!--
+      The main contains ALL of the content unique to this page.
+      Every page MUST have exactly one `main` that is a direct child of `body`.
+    -->
+    <main id="main">
+      <header class="banner">
+        <div class="container">
+          <div class="container--text">
+            <h1 class="banner__headline">Basics</h1>
+            <div class="banner__byline">
+              <p>
+                CSS Grid is one of the best options for layout. It is both
+                versatile and flexible, while also providing for consistency and
+                precision when needed.
+              </p>
+              <p>
+                Just like flexbox, we start with the parent element, applying
+                <code>display: grid;</code> as well as a combination
+                <code>grid-template-columns</code> and other sizing and layout
+                properties to set the initial layout. We then target the child
+                elements and apply properties like <code>grid-column</code>,
+                <code>grid-row</code> and others to adjust their placement and
+                alignment on the grid.
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- 
+        ====================================================
+        ============== TUTORIAL CONTENT START ==============
+        ====================================================
+      -->
+
+      <section>
+        <div class="container">
+          <h2>Basic Grid</h2>
+          <div class="parent grid-basic">
+            <div class="box box--one">1</div>
+            <div class="box box--two">2</div>
+            <div class="box box--three">3</div>
+            <div class="box box--four">4</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>Grid Alignment</h2>
+          <p>
+            We can take advantage of the <code>align-items</code> and
+            <code>align-self</code> CSS properties to adjust our layout.
+          </p>
+          <div class="parent grid-alignment">
+            <div class="box box--one">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+              adipisci aliquam ut enim necessitatibus rem animi numquam
+              architecto ad, quidem impedit quae dolores, deserunt praesentium
+              reprehenderit laboriosam natus voluptate! Iure!
+            </div>
+            <div class="box box--two">
+              Illum doloremque expedita aliquam. Temporibus, facilis, magni, non
+              expedita laboriosam illum quo eveniet consequatur amet autem
+              porro!
+            </div>
+            <div class="box box--three">
+              Quos minima ab est maxime fugiat quidem, error sapiente labore
+              quod eveniet similique fuga, perspiciatis sequi! Iste, earum!
+              Omnis eos neque fugit non a ab ut quis tenetur impedit aut.
+            </div>
+            <div class="box box--four">
+              Adipisci nemo dolore deleniti non reiciendis delectus earum
+              aliquid tenetur nobis.
+            </div>
+            <div class="box box--five">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequatur itaque ab a quae error rem aut illum aperiam repellat
+              necessitatibus, facilis sit minima, ad quisquam atque unde. Dolor,
+              atque rem.
+            </div>
+            <div class="box box--six">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas
+              nihil quo mollitia, distinctio deleniti ipsam maxime. Ab, quam
+              veritatis voluptate vitae fugiat, nostrum cumque at quibusdam et
+              praesentium, error a?Animi suscipit reprehenderit numquam veniam
+              eveniet, at sapiente, qui ipsa veritatis nihil expedita
+              repellendus totam accusantium modi nam minus consectetur. Pariatur
+              voluptatem dolorum vel facilis consectetur minus ipsum magnam
+              fuga.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>Item Placement & Spanning Across Columns &amp; Rows</h2>
+          <p>
+            By using the <code>grid-column</code> and <code>grid-row</code> we
+            can adjust how our grid items sit within the columns and rows of our
+            grid.
+          </p>
+          <div class="parent grid-placement">
+            <div class="box box--one">
+              <h3>Heading</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur adipisci aliquam ut enim necessitatibus rem animi
+                numquam architecto ad, quidem impedit quae dolores, deserunt
+                praesentium reprehenderit laboriosam natus voluptate! Iure!
+              </p>
+            </div>
+            <div class="box box--two">
+              <h3>Heading</h3>
+              <p>
+                Illum doloremque expedita aliquam. Temporibus, facilis, magni,
+                non expedita laboriosam illum quo eveniet consequatur amet autem
+                porro!
+              </p>
+            </div>
+            <div class="box box--three">
+              <h3>Heading</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur itaque ab a quae error rem aut illum aperiam
+                repellat necessitatibus, facilis sit minima, ad quisquam atque
+                unde. Dolor, atque rem.
+              </p>
+            </div>
+            <div class="box box--four">
+              <h3>Heading</h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Voluptas nihil quo mollitia, distinctio deleniti ipsam maxime.
+                Ab, quam veritatis voluptate vitae fugiat, nostrum cumque at
+                quibusdam et praesentium, error a?Animi suscipit reprehenderit
+                numquam veniam eveniet, at sapiente, qui ipsa veritatis nihil
+                expedita repellendus totam accusantium modi nam minus
+                consectetur. Pariatur voluptatem dolorum vel facilis consectetur
+                minus ipsum magnam fuga.
+              </p>
+            </div>
+            <div class="box box--five">
+              <h3>Heading</h3>
+              <p>
+                Quos minima ab est maxime fugiat quidem, error sapiente labore
+                quod eveniet similique fuga, perspiciatis sequi! Iste, earum!
+                Omnis eos neque fugit non a ab ut quis tenetur impedit aut.
+              </p>
+            </div>
+            <div class="box box--six">
+              <h3>Heading</h3>
+              <p>
+                Adipisci nemo dolore deleniti non reiciendis delectus earum
+                aliquid tenetur nobis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 
+        ====================================================
+        =============== TUTORIAL CONTENT END ===============
+        ====================================================
+      -->
+    </main>
+
+    <!--
+      Site footer. Contains site logo and legal info.
+      
+      Could also contain other concluding information such
+      as repeating the navigation, contact info, and more.
+    -->
+    <footer class="footer">
+      <div class="container container--grid">
+        <div class="footer__column">
+          <a href="/" class="footer__logo">
+            <span class="footer__week">Week 7</span>
+            <span class="footer__title">Grid AKA The&nbsp;G.O.A.T.</span>
+          </a>
+        </div>
+
+        <div class="footer__column footer__column--legal">
+          <small>
+            Created for
+            <a href="https://mad9013.github.io/F2023/">MAD9013 course</a> and
+            free for any use.
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Accessibility feature: return to top button -->
+    <a href="#page" class="to-top">To Top</a>
+
+    <!--
+      Adds a layer when the mobile navigation is open that
+      allows users to click to the side and auto close the nav
+    -->
+    <div class="click-to-close"></div>
+
+    <!-- Loads custom JavaScript file -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

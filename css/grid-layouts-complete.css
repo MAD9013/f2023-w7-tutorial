@@ -1,0 +1,221 @@
+img {
+  width: 100%;
+  display: block;
+}
+
+/* ---------- Grid System ---------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.xs-1 {
+  grid-column: span 12;
+}
+
+@media only screen and (min-width: 25em) {
+  .s-1 {
+    grid-column: span 12;
+  }
+
+  .s-1-2 {
+    grid-column: span 6;
+  }
+}
+
+@media only screen and (min-width: 45em) {
+  .m-1 {
+    grid-column: span 12;
+  }
+
+  .m-1-2 {
+    grid-column: span 6;
+  }
+
+  .m-1-3 {
+    grid-column: span 4;
+  }
+
+  .m-2-3 {
+    grid-column: span 8;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  .l-1 {
+    grid-column: span 12;
+  }
+
+  .l-1-2 {
+    grid-column: span 6;
+  }
+
+  .l-1-3 {
+    grid-column: span 4;
+  }
+
+  .l-1-4 {
+    grid-column: span 3;
+  }
+}
+
+/* ---------- Card Grid ---------- */
+
+.grid-cards {
+  gap: 1.5rem;
+}
+
+.grid-cards .col {
+  display: flex;
+}
+
+.grid-cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.grid-cards .card__content {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.grid-cards .card__text {
+  flex-grow: 2;
+}
+
+/* ---------- Split Content ---------- */
+
+.container--grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+}
+
+.split-content .container--grid {
+  align-items: center;
+}
+
+@media only screen and (min-width: 45em) {
+  .split-content .split-content__img {
+    grid-column: span 4;
+  }
+
+  .split-content .split-content__content {
+    grid-column: span 8;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  .split-content .split-content__img {
+    grid-column: span 6;
+  }
+
+  .split-content .split-content__content {
+    grid-column: span 6;
+  }
+}
+
+/* ---------- Container Winged ---------- */
+
+.container--winged {
+  --cols: 12;
+  --gap: 1.5rem;
+  width: 100%;
+  display: grid;
+  gap: var(--gap);
+
+  grid-template-columns:
+    1fr repeat(
+      var(--cols),
+      min(
+        calc(
+          (var(--container) - (var(--gap) * (var(--cols) + 1))) / var(--cols)
+        ),
+        calc((100% - (var(--gap) * (var(--cols) + 1))) / var(--cols))
+      )
+    )
+    1fr;
+  /* SEE EXPLANATION BELOW */
+}
+
+.container--winged > * {
+  grid-column: 2 / -2;
+}
+
+.container--winged > .full {
+  grid-column: 1 / -1;
+}
+
+.container--winged > img.full {
+  max-height: 30rem;
+  object-fit: cover;
+}
+
+.container--winged > .wide-left {
+  grid-column: 1 / span 7;
+}
+
+.container--winged > .contained-right {
+  grid-column: 8 / span 6;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+/*
+  What the heck is going on with the wild
+  grid-template-columns above?
+
+  1fr
+  ---- The first column gets 1fr, which fills as
+  much space as possible on the left side,
+  mimicking the margin on a normal container,
+  but also allowing content to be placed there.
+  On mobile it shrinks to the point of disappearing
+  because the size of the middle columns compresses it.
+  
+  repeat(...)
+  ---- Here we are doing some math with calc() and
+  size comparisons with min() to figure out how big
+  to make each central column. Basically what we are doing
+  is when the screen size is smaller is we are making
+  each column approximately 100% / 12 but are first
+  subtracting a bit of the width to compensate for
+  the space the gap takes up. On larger screen sizes
+  where we want to the limit the width to the container
+  size, we are taking the width of the container (65em)
+  subtracting the space taken up by the gap values and
+  then dividing up what is left over.
+
+  ---- The version above is made extra complicated by using
+  variables to allow for quick changes to the amount
+  of columns within the container area.
+
+  Here are the equations without the variables:
+  repeat(
+    12,
+    min(
+      calc( (65em - (1.5rem * (12 + 1))) / 12 ),
+      calc( (100% - (1.5rem * (12 + 1))) / 12 ),
+    )
+  )
+
+  We take the container width (65em) subtract 13 gaps
+  (11 gaps between central columns and 1 gap on each side
+  of the container) then divide the remaining amount by
+  12, the number of columns.
+
+  1fr
+  ---- The last column also gets 1fr, filling the same
+  roll as the first column but on the right
+
+  Don't worry if you don't fully understand what is
+  happening with this grid layout! Its very advanced
+  and is being used to demonstrate what is possible. I
+  don't expect this to be implemented this semester.
+*/

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Ensures that the text characters are displayed properly -->
+    <meta charset="UTF-8" />
+
+    <!-- Properly sizes content across different browser window sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+      The site title displayed in the browser tab.
+      Also used for Search Engine Optimization (SEO),
+      Google results, and accessibility tools/screen readers.
+    -->
+    <title>W7 - Grid AKA The&nbsp;G.O.A.T.</title>
+
+    <!-- Loads custom supporting CSS stylesheet(s) -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- Loads Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+  <body id="page">
+    <!--
+      Accessibility feature that allows users to
+      quickly skip to key areas on the page.
+    -->
+    <ul class="skip-links">
+      <li>
+        <a class="skip-links__link" href="#nav">Skip to site navigation</a>
+      </li>
+      <li>
+        <a class="skip-links__link" href="#main">Skip to main content</a>
+      </li>
+    </ul>
+
+    <!--
+      Main site header. Features our site logo and navigation.
+    -->
+    <header class="navbar navbar--tall">
+      <div class="container">
+        <h1 class="navbar__headline">
+          <a href="/" class="navbar__logo">
+            <span class="navbar__week">Week 7</span>
+            <span class="navbar__title">Grid AKA The&nbsp;G.O.A.T.</span>
+          </a>
+        </h1>
+        <button
+          class="navbar__toggle"
+          aria-label="Click to open mobile navigation"
+        >
+          <span class="navbar__tog navbar__tog--top"></span>
+          <span class="navbar__tog navbar__tog--middle"></span>
+          <span class="navbar__tog navbar__tog--bottom"></span>
+        </button>
+        <nav id="nav" class="navbar__nav">
+          <ul class="navbar__list">
+            <li>
+              <a href="./grid-basics.html" class="navbar__link">Basics</a>
+            </li>
+            <li>
+              <a href="./grid-areas.html" class="navbar__link">Grid Areas</a>
+            </li>
+            <li>
+              <a href="./grid-auto-flow.html" class="navbar__link">
+                Auto Flow
+              </a>
+            </li>
+            <li>
+              <a href="./grid-layouts.html" class="navbar__link"> Layouts </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!--
+      The main contains ALL of the content unique to this page.
+      Every page MUST have exactly one `main` that is a direct child of `body`.
+    -->
+    <main id="main">
+      <section class="topic-list">
+        <div class="container">
+          <h2>Topics</h2>
+          <ol class="topic-list__list">
+            <li>
+              <a href="./grid-basics.html" class="topic-list__link">
+                <h3 class="topic-list__heading">Basics</h3>
+                <p class="topic-list__desc">
+                  Let's explore the basics of what grid does, how it works, and
+                  the properties associated with it.
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="./grid-areas.html" class="topic-list__link">
+                <h3 class="topic-list__heading">Grid Areas</h3>
+                <p class="topic-list__desc">
+                  Now that we have the basics, let's add named grid areas, which
+                  give us more direct control over our layouts.
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="./grid-auto-flow.html" class="topic-list__link">
+                <h3 class="topic-list__heading">Auto Flow</h3>
+                <p class="topic-list__desc">
+                  Lets take our grid to the next level with
+                  <code>grid-auto-flow</code>, which allows for more
+                  flexibility.
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="./grid-layouts.html" class="topic-list__link">
+                <h3 class="topic-list__heading">Layouts</h3>
+                <p class="topic-list__desc">
+                  Together let's explore some common, responsive layouts and
+                  learn how to make them with grid.
+                </p>
+              </a>
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <!--
+      Site footer. Contains site logo and legal info.
+      
+      Could also contain other concluding information such
+      as repeating the navigation, contact info, and more.
+    -->
+    <footer class="footer">
+      <div class="container container--grid">
+        <div class="footer__column">
+          <a href="/" class="footer__logo">
+            <span class="footer__week">Week 7</span>
+            <span class="footer__title">Grid AKA The&nbsp;G.O.A.T.</span>
+          </a>
+        </div>
+
+        <div class="footer__column footer__column--legal">
+          <small>
+            Created for
+            <a href="https://mad9013.github.io/F2023/">MAD9013 course</a> and
+            free for any use.
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Accessibility feature: return to top button -->
+    <a href="#page" class="to-top">To Top</a>
+
+    <!--
+      Adds a layer when the mobile navigation is open that
+      allows users to click to the side and auto close the nav
+    -->
+    <div class="click-to-close"></div>
+
+    <!-- Loads custom JavaScript file -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
